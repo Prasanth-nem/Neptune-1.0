@@ -12,7 +12,7 @@ def render():
     st.markdown(
         """
         <div style="text-align: center; padding: 1rem 0 0.5rem 0;">
-            <h1 style="font-size: 3rem; color: #1B5E20; margin: 0;">🌱 Neptune 1.0</h1>
+            <h1 style="font-size: 3rem; color: #1B5E20; margin: 0;">🌊 Neptune 1.0</h1>
             <p style="font-size: 1.2rem; color: #444; margin: 0.2rem 0 0 0;">
                 Intelligent Entomopathogenic Nematode Recommendation System
             </p>
@@ -29,25 +29,25 @@ def render():
 
     with col1:
         st.markdown(
-            """
+            f"""
             <div class="metric-card">
                 <div class="metric-icon">🧬</div>
-                <div class="metric-value">{}</div>
+                <div class="metric-value">{len(SPECIES_DATA)}</div>
                 <div class="metric-label">Total Species</div>
             </div>
-            """.format(len(SPECIES_DATA)),
+            """,
             unsafe_allow_html=True,
         )
 
     with col2:
         st.markdown(
-            """
+            f"""
             <div class="metric-card">
                 <div class="metric-icon">🐛</div>
-                <div class="metric-value">{}</div>
+                <div class="metric-value">{len(ALL_PESTS)}</div>
                 <div class="metric-label">Total Pests Covered</div>
             </div>
-            """.format(len(ALL_PESTS)),
+            """,
             unsafe_allow_html=True,
         )
 
@@ -122,9 +122,7 @@ def render():
         The system uses a weighted scoring algorithm based on research data to recommend the most suitable EPN species for your specific situation.
         """)
 
-    # pages/home.py (only footer changed, rest unchanged)
-...
-# At the bottom of the render() function:
+    # Footer – updated to Neptune 1.0
     st.markdown(
         """
         <div class="footer">
