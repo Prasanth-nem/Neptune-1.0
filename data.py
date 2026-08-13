@@ -1,12 +1,8 @@
 # data.py
 """
 Neptune 1.0 - Data Module
-Contains research data for 5 EPN species based on the research document.
+Contains research data for 5 EPN species – exact match to the research document.
 """
-
-# ============================================================================
-# SPECIES DATA - 5 Nematode Species
-# ============================================================================
 
 SPECIES_DATA = {
     "Heterorhabditis indica": {
@@ -30,19 +26,16 @@ SPECIES_DATA = {
         },
         "pests": [
             "White Grubs",
-            "Small Hive Beetle",
             "Fall Armyworm",
             "Tobacco Caterpillar",
-            "Sweet Potato Weevil",
+            "Cutworm",
             "Cotton Bollworm",
-            "Fungus Gnats",
             "Oriental Fruit Fly",
-            "Root Weevils",
             "Banana Weevil Borer",
             "Diamondback Moth",
-            "Termites",
+            "Ash weevil",
         ],
-        "description": "Heterorhabditis indica is a highly effective entomopathogenic nematode for controlling a wide range of soil-dwelling pests. It is known for its excellent host-finding ability and tolerance to various soil conditions. Effective against Coleoptera, Lepidoptera, Diptera and Orthoptera.",
+        "description": "Heterorhabditis indica is a highly effective EPN for controlling a wide range of soil‑dwelling pests. It has excellent host‑finding ability and tolerates varied soil conditions. Effective against White Grubs, Fall Armyworm, and many others.",
         "icon": "🐛",
         "color": "#2E7D32",
     },
@@ -50,7 +43,7 @@ SPECIES_DATA = {
         "name": "Steinernema siamkayai",
         "common_name": "S. siamkayai",
         "soil_moisture": {"min": 15, "max": 20, "unit": "%"},
-        "soil_temperature": {"min": 25, "max": 35, "unit": "°C"},
+        "soil_temperature": {"min": 25, "max": 30, "unit": "°C"},
         "atmospheric_temperature": {"min": 20, "max": 35, "unit": "°C"},
         "ph": {"min": 3.0, "max": 7.0, "up_to": 8.5},
         "relative_humidity": {"min": 90, "unit": "%"},
@@ -70,13 +63,12 @@ SPECIES_DATA = {
             "Oriental Fruit Fly",
             "Fall Armyworm",
             "Tobacco Caterpillar",
-            "Corn Earworm",
-            "Greater Wax Moth",
-            "Fungus Gnats",
+            "Tomato Fruit Borer",
             "Diamondback Moth",
             "Common Cutworm",
+            "Ash weevil",
         ],
-        "description": "Steinernema siamkayai is a versatile entomopathogenic nematode species effective against a broad spectrum of pests. It performs well across a wide pH range and is particularly effective in sandy soils. Effective against Coleoptera, Lepidoptera, Diptera and Thysanoptera.",
+        "description": "Steinernema siamkayai is a versatile EPN effective against a broad spectrum of pests. It performs well across a wide pH range and tolerates temperatures up to 35°C. It is particularly effective in sandy soils.",
         "icon": "🪱",
         "color": "#1565C0",
     },
@@ -101,18 +93,8 @@ SPECIES_DATA = {
             "Black Cutworm",
             "Fall Armyworm",
             "Beet Armyworm",
-            "Sod Webworms",
-            "Codling Moth",
-            "Peachtree Borer",
-            "Lesser Peachtree Borer",
-            "Squash Vine Borer",
-            "Tawny Mole Cricket",
-            "Southern Mole Cricket",
-            "Short-winged Mole Cricket",
-            "Cat Flea",
-            "Dog Flea",
         ],
-        "description": "Steinernema glaseri is a highly effective EPN species known for its deep penetration ability (15-30 cm). It performs well in coarse sandy soils and has excellent tolerance to saline conditions. Effective against a wide range of pests including mole crickets, cutworms, and fleas.",
+        "description": "Steinernema glaseri is highly effective against cutworms, armyworms, and mole crickets. It penetrates deep into the soil (15‑30 cm) and thrives in coarse sandy soils. Tolerates high salinity.",
         "icon": "🐛",
         "color": "#E65100",
     },
@@ -127,26 +109,17 @@ SPECIES_DATA = {
         "preferred_soils": ["Sandy Loam", "Loam", "Silt Loam"],
         "porosity": {"min": 40, "max": 50, "unit": "%"},
         "bulk_density": {"min": 1.20, "max": 1.50, "unit": "g/cm³"},
-        "ec": {"min": 0.0, "max": 2.5, "unit": "dS/m"},
+        "ec": {"min": 0.0, "max": 2.5, "unit": "dS/m", "decline_at": 4.0},
         "saline_tolerance": {"max": 25.0, "unit": "dS/m"},
         "sodic_tolerance": {"max": 8, "unit": "ESP%"},
         "penetration_depth": {
-            "typical": {"min": 3, "max": 5, "unit": "cm"},
+            "typical": {"min": 1, "max": 5, "unit": "cm"},
         },
         "pests": [
-            "Japanese Beetle",
-            "European Chafer",
-            "Northern Masked Chafer",
-            "Southern Masked Chafer",
-            "Black Vine Weevil",
-            "Strawberry Root Weevil",
-            "Diaprepes Root Weevil",
-            "Western Corn Rootworm",
-            "Northern Corn Rootworm",
-            "Southern Corn Rootworm",
-            "Fungus Gnats",
+            "Ash weevil",
+            "Fall Armyworm",
         ],
-        "description": "Steinernema carpocapsae is one of the most widely used EPN species. It is highly effective against a variety of pests and is known for its ambush foraging strategy, making it particularly effective against surface-dwelling pests. Penetration depth is up to 5 cm.",
+        "description": "Steinernema carpocapsae is an ambush forager, effective against surface‑dwelling pests. It penetrates only to 5 cm, making it ideal for targeting pests near the soil surface. Controls Ash weevil and Fall Armyworm.",
         "icon": "🪱",
         "color": "#7B1FA2",
     },
@@ -161,32 +134,23 @@ SPECIES_DATA = {
         "preferred_soils": ["Sand", "Sandy Loam", "Loamy Sand"],
         "porosity": {"min": 43, "max": 55, "unit": "%"},
         "bulk_density": {"min": 1.15, "max": 1.35, "unit": "g/cm³"},
-        "ec": {"min": 0.0, "max": 2.0, "unit": "dS/m"},
+        "ec": {"min": 0.0, "max": 2.0, "unit": "dS/m", "decline_at": 4.0},
         "saline_tolerance": {"max": 35.0, "unit": "dS/m"},
         "sodic_tolerance": {"max": 12, "unit": "ESP%"},
         "penetration_depth": {
             "typical": {"min": 10, "max": 35, "unit": "cm"},
         },
         "pests": [
-            "Japanese Beetle (Late 3rd Instar)",
-            "May Beetles",
-            "June Beetles",
-            "Oriental Beetle",
-            "Green June Beetle",
+            "White grub",
             "Banana Weevil Borer",
-            "Greater Wax Moth",
         ],
-        "description": "Heterorhabditis bacteriophora is a powerful EPN species known for its excellent host-finding ability and deep penetration (10-35 cm). It is particularly effective against white grubs, June beetles, and banana weevil borers. Requires relative humidity >95%.",
+        "description": "Heterorhabditis bacteriophora is a powerful EPN with deep penetration (10‑35 cm). It is highly effective against white grubs and banana weevil borers. Requires high humidity (>95%).",
         "icon": "🐛",
         "color": "#00838F",
     },
 }
 
-# ============================================================================
-# PEST MAPPING
-# ============================================================================
-
-# Build pest to species mapping
+# Build pest mapping
 PEST_MAPPING = {}
 for species, data in SPECIES_DATA.items():
     for pest in data["pests"]:
@@ -194,13 +158,9 @@ for species, data in SPECIES_DATA.items():
             PEST_MAPPING[pest] = []
         PEST_MAPPING[pest].append(species)
 
-# All unique pests
 ALL_PESTS = sorted(PEST_MAPPING.keys())
-
-# Species names list
 SPECIES_NAMES = list(SPECIES_DATA.keys())
 
-# Soil types (combined from all species)
 SOIL_TYPES = sorted(
     set(
         soil
@@ -209,40 +169,21 @@ SOIL_TYPES = sorted(
     )
 )
 
-# ============================================================================
-# HELPER FUNCTIONS
-# ============================================================================
-
 def get_species_for_pest(pest_name):
-    """Get all species that can control a given pest."""
     return PEST_MAPPING.get(pest_name, [])
 
-
 def get_pests_for_species(species_name):
-    """Get all pests that a species can control."""
     if species_name in SPECIES_DATA:
         return SPECIES_DATA[species_name]["pests"]
     return []
 
-
 def get_species_data(species_name):
-    """Get full data for a species."""
     return SPECIES_DATA.get(species_name, None)
 
-
 def get_all_parameter_names():
-    """Get list of all parameter names."""
-    return [
-        "Soil Type",
-        "pH",
-        "Soil Moisture",
-        "Soil Temperature",
-        "EC",
-    ]
-
+    return ["Soil Type", "pH", "Soil Moisture", "Soil Temperature", "EC"]
 
 def get_parameter_display_name(param):
-    """Get display name for a parameter."""
     mapping = {
         "soil_type": "Soil Type",
         "ph": "pH",
@@ -252,9 +193,7 @@ def get_parameter_display_name(param):
     }
     return mapping.get(param, param)
 
-
 def get_parameter_key(param):
-    """Get the internal key for a parameter."""
     mapping = {
         "Soil Type": "soil_type",
         "pH": "ph",
@@ -264,11 +203,8 @@ def get_parameter_key(param):
     }
     return mapping.get(param, param.lower().replace(" ", "_"))
 
-
 def validate_parameter(param_name, value):
-    """Validate a parameter value."""
     param_key = get_parameter_key(param_name)
-
     if param_key == "soil_type":
         return value in SOIL_TYPES, f"Must be one of: {', '.join(SOIL_TYPES)}"
     elif param_key == "ph":
