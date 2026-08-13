@@ -122,11 +122,13 @@ def render():
         The system uses a weighted scoring algorithm based on research data to recommend the most suitable EPN species for your specific situation.
         """)
 
-    # Footer
+    # pages/home.py (only footer changed, rest unchanged)
+...
+# At the bottom of the render() function:
     st.markdown(
         """
         <div class="footer">
-            Neptune 1.0 v1.0 — Research-based Decision Support System
+            Neptune 1.0 — Research-based Decision Support System
         </div>
         """,
         unsafe_allow_html=True,
