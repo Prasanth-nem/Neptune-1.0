@@ -112,25 +112,6 @@ def render():
     """)
 
     # Limitations and Disclaimer
-    st.markdown("### ⚠️ Limitations & Disclaimer")
-
-    st.warning(
-        """
-        **Important Disclaimer:**
-
-        This application is a **decision-support tool** and recommendations should be 
-        **validated with field conditions and expert guidance**.
-
-        The recommendations are based on research data and may not account for:
-        - Local micro-climatic variations
-        - Soil heterogeneity within fields
-        - Pest population dynamics
-        - Nematode application methods and timing
-        - Interactions with other soil organisms
-
-        **Always consult with local agricultural experts** before making pest management decisions.
-        """
-    )
 
     # Research Contributors
     with st.expander("👨‍🔬 Research Contributors"):
