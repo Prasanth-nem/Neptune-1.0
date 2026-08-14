@@ -65,7 +65,6 @@ SPECIES_DATA = {
             "Tobacco Caterpillar",
             "Tomato Fruit Borer",
             "Diamondback Moth",
-            "Common Cutworm",
             "Ash weevil",
         ],
         "description": "Steinernema siamkayai is a versatile EPN effective against a broad spectrum of pests. It performs well across a wide pH range and tolerates temperatures up to 35°C. It is particularly effective in sandy soils.",
@@ -90,7 +89,6 @@ SPECIES_DATA = {
             "typical": {"min": 15, "max": 30, "unit": "cm"},
         },
         "pests": [
-            "Black Cutworm",
             "Fall Armyworm",
             "Beet Armyworm",
         ],
@@ -141,7 +139,6 @@ SPECIES_DATA = {
             "typical": {"min": 10, "max": 35, "unit": "cm"},
         },
         "pests": [
-            "White grub",
             "Banana Weevil Borer",
         ],
         "description": "Heterorhabditis bacteriophora is a powerful EPN with deep penetration (10‑35 cm). It is highly effective against white grubs and banana weevil borers. Requires high humidity (>95%).",
