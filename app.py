@@ -126,7 +126,7 @@ with st.sidebar:
         <hr style="margin: 20px 0 10px 0; border-color: #ddd;">
         <div style="text-align: center; font-size: 0.75rem; color: #888;">
             <p>Neptune 1.0</p>
-            <p>🧪 Research-based Decision Support</p>
+            <p>🧪  Decision Support</p>
         </div>
         """,
         unsafe_allow_html=True,
